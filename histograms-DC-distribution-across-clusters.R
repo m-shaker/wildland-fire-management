@@ -1,0 +1,37 @@
+
+### Histograms to understand DC distribution in the 6 clusters
+
+#Histograms to understand DC distribution in the 6 clusters
+
+#Values of DC for cluster 1
+cluster_one_d <- subset(cust.long, clust.num == 1)
+cluster_one_DC <- subset(cluster_one_d, variable == "df.DC")
+
+#Values of DC for cluster 2
+cluster_two_d <- subset(cust.long, clust.num == 2)
+cluster_two_DC <- subset(cluster_two_d, variable == "df.DC")
+
+#Values of DC for cluster 3
+cluster_three_d <- subset(cust.long, clust.num == 3)
+cluster_three_DC <- subset(cluster_three_d, variable == "df.DC")
+
+#Values of DC for cluster 4
+cluster_four_d <- subset(cust.long, clust.num == 4)
+cluster_four_DC <- subset(cluster_four_d, variable == "df.DC")
+
+#Values of DC for cluster 5
+cluster_five_d <- subset(cust.long, clust.num == 5)
+cluster_five_DC <- subset(cluster_five_d, variable == "df.DC")
+
+#Values of DC for cluster 6 
+cluster_six_d <- subset(cust.long, clust.num == 6)
+cluster_six_DC <- subset(cluster_six_d, variable == "df.DC")
+
+#Plotting DC for all 6 clusters
+hist(as.numeric(cluster_one_DC$value), main = "DC Distribution for Cluster 1")
+hist(as.numeric(cluster_two_DC$value), main = "DC Distribution for Cluster 2")
+hist(as.numeric(cluster_three_DC$value), main = "DC Distribution for Cluster 3")
+hist(as.numeric(cluster_four_DC$value), main = "DC Distribution for Cluster 4")
+hist(as.numeric(cluster_five_DC$value), main = "DC Distribution for Cluster 5")
+hist(as.numeric(cluster_six_DC$value), main = "DC Distribution for Cluster 6")
+
